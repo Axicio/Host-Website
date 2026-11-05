@@ -1,0 +1,133 @@
+<!-- nav bar -->
+<nav class="navbar navbar-expand-lg sticky-top bg-white">
+  <div class="container-sm">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
+      <img
+        class="brand-logo"
+        src="./images/Angkor-wat-logo.jpg"
+        alt=""
+        width="50"
+        height="50"
+      />
+      <span>AngkorHost</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse flex-column flex-lg-row justify-content-between navbar-collapse"
+      id="navbarNav"
+    >
+      <ul class="navbar-nav lead">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#how-it-works">How It Works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#features">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#pricing">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav d-flex align-items-center gap-2">
+        <li class="nav-item">
+          <a class="btn btn-outline-secondary" href="#createAcc" data-bs-toggle="modal" data-bs-target="#createAcc"
+            >Create Account</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="btn btn-primary"
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#LogIn"
+            >Log In</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- end navbar -->
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="LogIn"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Log In</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <form id="loginForm">
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="email@example.com"
+            name="email"
+            autocomplete="email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <div class="input-group">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+              name="password"
+              autocomplete="current-password"
+              required
+            />
+            <button class="btn btn-outline-secondary password-toggle" type="button" data-password-target="password" aria-label="Show password">Show</button>
+          </div>
+        </div>
+      </div>
+        <p class="form-status px-3 mb-0" id="loginStatus" aria-live="polite"></p>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+        <button type="submit" class="btn btn-primary">Log In</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>

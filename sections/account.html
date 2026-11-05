@@ -1,0 +1,62 @@
+<!-- Create account modal -->
+<div
+  class="modal fade"
+  id="createAcc"
+  tabindex="-1"
+  aria-labelledby="createAccountTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <span class="badge text-bg-warning section-kicker mb-2">Account</span>
+          <h2 class="modal-title h3" id="createAccountTitle">Create your account</h2>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="accountForm">
+        <div class="modal-body p-4">
+          <div class="mb-3">
+            <label for="selectedPlan" class="form-label">Selected plan</label>
+            <select class="form-select form-select-lg" id="selectedPlan" name="plan">
+              <option>Starter</option>
+              <option selected>Recommended</option>
+              <option>Enterprise</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Full name</label>
+            <input type="text" class="form-control form-control-lg" id="fullName" placeholder="Full Name" name="fullName" autocomplete="name" required />
+          </div>
+          <div class="mb-3">
+            <label for="accountEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control form-control-lg" id="accountEmail" placeholder="Email address" name="email" autocomplete="email" required />
+          </div>
+          <div class="mb-3">
+            <label for="accountPassword" class="form-label">Password</label>
+            <div class="input-group">
+              <input type="password" class="form-control form-control-lg" id="accountPassword" placeholder="Password" name="password" autocomplete="new-password" minlength="8" aria-describedby="passwordHelp passwordStrength" required />
+              <button class="btn btn-outline-secondary password-toggle" type="button" data-password-target="accountPassword" aria-label="Show password">Show</button>
+            </div>
+            <div id="passwordHelp" class="form-text">Use 8+ characters with uppercase, lowercase, and a number.</div>
+            <div class="password-meter mt-2" aria-hidden="true"><div class="password-meter-bar" id="passwordMeterBar"></div></div>
+            <div id="passwordStrength" class="form-text" aria-live="polite">Password strength: not entered</div>
+          </div>
+          <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Confirm password</label>
+            <div class="input-group">
+              <input type="password" class="form-control form-control-lg" id="confirmPassword" placeholder="Confirm Password" name="confirmPassword" autocomplete="new-password" minlength="8" required />
+              <button class="btn btn-outline-secondary password-toggle" type="button" data-password-target="confirmPassword" aria-label="Show password">Show</button>
+            </div>
+          </div>
+          <p class="form-status mb-0" id="accountStatus" aria-live="polite"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Create Account</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
